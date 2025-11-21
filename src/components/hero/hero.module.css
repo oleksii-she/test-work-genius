@@ -1,0 +1,8 @@
+.hero {
+  padding-top: 20px;
+}
+@media (min-width: 992px) {
+  .hero {
+    padding-top: 36px;
+  }
+}

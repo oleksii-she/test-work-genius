@@ -1,26 +1,232 @@
-@import "tailwindcss";
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* color */
+  --active-nav: #8b57c2;
+
+
+  /* animate */
+
+  --default-transition: all 0.3s ease;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body * {
+  font-family: var(--font-gilroy);
+  font-weight: 500;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  font-family: var(--font-gilroy);
+  font-weight: 500;
+}
+
+.button-course {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 0 16px;
+  height: 25px;
+
+  font-weight: 700;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+
+  transition: var(--default-transition);
+}
+
+.button-course:active {
+  background: var(--active-nav);
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  .button-course {
+    width: 272px;
+
+    height: 56px;
+  }
+
+  .button-course:hover {
+    background: var(--active-nav);
+    border-color: var(--active-nav);
+    color: #fff;
+    box-shadow: 0 0 10px var(--active-nav);
+  }
+}
+
+.navigation-desktop-active {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .navigation-desktop-active {
+    display: block;
+  }
+}
+
+/* globals header */
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+
+  font-size: 15px;
+  line-height: 160%;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .navigation ul {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.navigation ul li {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navigation ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.navigation ul li .active {
+  color: var(--active-nav);
+}
+
+.logo {
+  position: relative;
+  z-index: 1100;
+}
+
+/* container */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* tablet */
+@media (min-width: 576px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/* desktop */
+@media (min-width: 992px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+/* desktop M */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 80px;
+  }
+}
+
+/* desktop 1440px+ */
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 100px;
+    max-width: 1440px;
+  }
 }

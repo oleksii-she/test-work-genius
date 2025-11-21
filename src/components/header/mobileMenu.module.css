@@ -1,0 +1,73 @@
+.mobileMenu {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.hamburger {
+  z-index: 99;
+  width: 36px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger::before {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-10px);
+  left: 0;
+}
+
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  transform: translateY(10px);
+  left: 0;
+}
+
+.mobileModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  z-index: 120;
+}
+
+@media (min-width: 992px) {
+  .mobileModal {
+    display: none;
+  }
+}
