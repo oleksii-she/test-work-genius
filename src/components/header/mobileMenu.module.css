@@ -8,6 +8,15 @@
   }
 }
 
+.buttonBurger {
+  width: 100%;
+  background: transparent;
+  height: 100%;
+  border: none;
+  z-index: 99;
+  position: relative;
+}
+
 .hamburger {
   z-index: 99;
   width: 36px;
@@ -58,16 +67,39 @@
   width: 100%;
   height: 100%;
   background-color: #121212;
+
+  opacity: 0;
+  pointer-events: none;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  flex-direction: column;
   gap: 40px;
-  z-index: 120;
+  transition: opacity 0.4s ease;
+  z-index: 80;
 }
 
+.isActive {
+  opacity: 1;
+  pointer-events: auto;
+}
 @media (min-width: 992px) {
   .mobileModal {
     display: none;
   }
+}
+
+.open {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.open::before {
+  transform: rotate(45deg);
+}
+
+.open::after {
+  transform: rotate(-45deg);
 }

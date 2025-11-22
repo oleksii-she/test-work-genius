@@ -1,113 +1,56 @@
-/* Reset CSS */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+@import '../src/styles/reset.css';
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 50%; /* 1rem = 8px */
+  }
+}
+
+/* Small mobile (iPhone SE, 360px) */
+@media (max-width: 380px) {
+  html {
+    font-size: 43.75%; /* 1rem = 7px */
+  }
 }
 
 :root {
   /* color */
   --active-nav: #8b57c2;
-
+  --brand-primary: #8b57c2;
+  --main-text: rgba(255, 255, 255, 0.7);
+  --white: #ffffff;
+  --background: #121212;
 
   /* animate */
 
   --default-transition: all 0.3s ease;
 }
 
-
 body * {
   font-family: var(--font-gilroy);
   font-weight: 500;
+  line-height: 100%;
 }
 
 body {
-  background-color: #121212;
-  color: #fff;
+  background-color: var(--background);
+  color: var(--main-text);
   font-family: var(--font-gilroy);
+  font-size: 1rem;
+  line-height: 140%;
   font-weight: 500;
 }
 
@@ -115,10 +58,10 @@ body {
   border: 1px solid #fff;
   border-radius: 10px;
   padding: 0 16px;
-  height: 25px;
+  height: 5.6rem;
 
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1.6rem;
   background: transparent;
   color: #fff;
   cursor: pointer;
@@ -126,19 +69,42 @@ body {
   transition: var(--default-transition);
 }
 
-.button-course:active {
+.button-course-hover:active {
   background: var(--active-nav);
   color: #fff;
 }
 
+.bg-violet {
+  background: var(--active-nav);
+  border-color: var(--active-nav);
+}
+
+.mobile-hide {
+  display: none;
+}
 @media (min-width: 992px) {
+  .button-course {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 0 16px;
+    height: 5.6rem;
+
+    font-weight: 700;
+
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+
+    transition: var(--default-transition);
+  }
+
   .button-course {
     width: 272px;
 
     height: 56px;
   }
 
-  .button-course:hover {
+  .button-course-hover:hover {
     background: var(--active-nav);
     border-color: var(--active-nav);
     color: #fff;
@@ -164,7 +130,7 @@ body {
   list-style: none;
   gap: 16px;
 
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 160%;
   text-align: center;
 }
@@ -176,12 +142,8 @@ body {
   }
 }
 
-.navigation ul li {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .navigation ul li a {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--main-text);
   text-decoration: none;
 }
 
@@ -192,6 +154,8 @@ body {
 .logo {
   position: relative;
   z-index: 1100;
+  width: 13.71rem;
+  height: auto;
 }
 
 /* container */
@@ -227,6 +191,6 @@ body {
 @media (min-width: 1440px) {
   .container {
     padding: 0 100px;
-    max-width: 1440px;
+    max-width: 1240px;
   }
 }
