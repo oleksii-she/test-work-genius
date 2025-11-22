@@ -12,11 +12,15 @@ const gilroy = localFont({
       style: 'normal',
     },
     {
+      path: '../public/fonts/Gilroy-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
       path: '../public/fonts/Gilroy-Bold.ttf',
       weight: '700',
       style: 'normal',
     },
-
   ],
   variable: '--font-gilroy',
 });
@@ -32,7 +36,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={gilroy.variable}>
+      <html
+      lang="en"
+      className={gilroy.variable}
+      data-lt-installed="true"
+      suppressHydrationWarning={true}
+    >
       <body>
         <Header />
         {children}

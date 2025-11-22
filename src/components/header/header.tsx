@@ -16,7 +16,9 @@ export const Header = () => {
         <NavigationList />
       </nav>
 
-      <button className={`${styles.activeButton} button-course`}>
+      <button
+        className={`${styles.activeButton} button-course button-course-hover mobile-hide`}
+      >
         Записатися на курс
       </button>
       <MobileMenu />

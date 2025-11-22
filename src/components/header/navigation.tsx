@@ -1,9 +1,7 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
-import { useRouter } from 'next/navigation';
 const data = [
   { id: 1, label: 'Спікери', href: '#speakers' },
   { id: 2, label: 'Програма', href: '#program' },
@@ -13,18 +11,6 @@ const data = [
 
 export const NavigationList = () => {
   const [activeHash, setActiveHash] = useState<string>('#speakers');
-  const pathname = usePathname();
-  const router = useRouter();
-
-  //   useEffect(() => {
-
-  //     const handleHashChange = () => {
-  //       setActiveHash(window.location.hash || '#speakers');
-  //     };
-
-  //     window.addEventListener('hashchange', handleHashChange);
-  //     return () => window.removeEventListener('hashchange', handleHashChange);
-  //   }, [pathname]);
 
   return (
     <ul>
