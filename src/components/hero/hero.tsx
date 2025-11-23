@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './hero.module.css';
 export const Hero = () => {
   return (
@@ -58,16 +59,20 @@ export const Hero = () => {
                   набагато більше за допомогою штучного інтелекту
                 </span>
               </p>
-              <button className="button-course bg-violet">
-                Записатися на курс
-              </button>
+              <div>
+                <Link href="#course" className="button-course bg-violet">
+                  Записатися на курс
+                </Link>
+              </div>
             </div>
           </div>
           <div className={styles['hero_wrapper__image-block']}>
-            <div className={styles['hero__image-block__decor--1']}></div>
-            <div className={styles['hero__image-block__decor--2']}></div>
-            <div className={styles['hero__image-block__decor--3']}></div>
-            <div className={styles['hero__image-block__decor--4']}></div>
+            <div className={styles['decor-wrapper']}>
+              <div className={styles['hero__image-block__decor--1']}></div>
+              <div className={styles['hero__image-block__decor--2']}></div>
+              <div className={styles['hero__image-block__decor--3']}></div>
+              <div className={styles['hero__image-block__decor--4']}></div>
+            </div>
           </div>
         </div>
       </div>

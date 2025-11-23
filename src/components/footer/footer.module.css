@@ -1,15 +1,20 @@
 .footer {
   background-color: var(--bg-footer);
+  color: var(--second-text);
+}
+
+.footer a {
+  color: var(--second-text);
 }
 
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
 
-  color: var(--second-text);
-
   padding-top: 4.4rem;
   padding-bottom: 5.8rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-box-Left > p {
@@ -25,6 +30,13 @@
   margin-bottom: 2rem;
 }
 
+.footer-box-Left div {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .footer-box-Left a svg {
   color: var(--second-text);
 }
@@ -34,8 +46,122 @@
   transition: var(--default-transition);
 }
 
-.footer-box-center {
+.footer-box-center ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.footer-box-center ul li {
+  line-height: 215%;
+}
+
+.footer-box-center ul li a {
+  color: var(--second-text);
+  padding: 0.2rem;
+}
+
+.footer-box-right p {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.copyright-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.copyright-wrapper_box-right ul {
+  display: flex;
+  align-items: center;
+  gap: 2.7rem;
+  list-style: none;
+}
+
+/* --- TABLET --- */
+@media (max-width: 992px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .footer-box-Left > p {
+    width: 100%; /* щоб текст не обрізався */
+  }
+
+  .footer-box-center,
+  .footer-box-right {
+    margin-top: 2rem;
+  }
+
+  .copyright-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .copyright-wrapper_box-right ul {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+/* --- MOBILE --- */
+@media (max-width: 576px) {
+  .footer-wrapper {
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-box-Left div {
+    gap: 1.2rem;
+  }
+
+  .footer-box-center ul li {
+    line-height: 160%;
+  }
+
+  .footer-box-right p {
+    font-size: 1.2rem;
+    line-height: 140%;
+  }
+
+  .copyright-wrapper {
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+
+  .copyright-wrapper_box-right ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* --- SMALL MOBILE (iPhone SE, 360px) --- */
+@media (max-width: 380px) {
+  .footer-wrapper {
+    gap: 1.6rem;
+  }
+
+  .footer-box-Left > p {
+    font-size: 1.1rem;
+    line-height: 130%;
+  }
+
+  .footer-box-right p {
+    font-size: 1.1rem;
+  }
+
+  .copyright-wrapper {
+    gap: 1rem;
+  }
 }

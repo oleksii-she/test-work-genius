@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container">
         <div className={styles['footer-wrapper']}>
           <div className={styles['footer-box-Left']}>
-            <Link href={'/'} className="brand-color--animate">
+            <Link href={'/'} className="brand-color--animate" scroll={false}>
               <Image
                 src="logo.svg"
                 width={95}
@@ -21,7 +21,7 @@ export const Footer = () => {
               02000, м. Київ, вул. Паньківська, 14.
             </p>
             <div>
-              <Link href={'#'} className="brand-color--animate">
+              <Link href={''} className="brand-color--animate" scroll={false}>
                 <svg
                   width="24"
                   height="24"
@@ -35,7 +35,7 @@ export const Footer = () => {
                   />
                 </svg>
               </Link>
-              <Link href={'#'}>
+              <Link href={''} scroll={false}>
                 <svg
                   width="23"
                   height="16"
@@ -49,7 +49,7 @@ export const Footer = () => {
                   />
                 </svg>
               </Link>
-              <Link href={'#'}>
+              <Link href={''} scroll={false}>
                 <svg
                   width="24"
                   height="20"
@@ -63,7 +63,7 @@ export const Footer = () => {
                   />
                 </svg>
               </Link>
-              <Link href={'#'}>
+              <Link href={''} scroll={false}>
                 <svg
                   width="24"
                   height="24"
@@ -97,34 +97,78 @@ export const Footer = () => {
           <div className={styles['footer-box-center']}>
             <h4 className="title-18">О GeniusMarketing</h4>
             <ul>
-              <li>
-                <Link href={'/'}>Головна</Link>
+              <li className="text-13">
+                <Link href={'/'} className="brand-color--animate">
+                  Головна
+                </Link>
               </li>
-              <li>
-                <Link href={'#'}>Блог</Link>
+              <li className="text-13">
+                <Link href="" className="brand-color--animate" scroll={false}>
+                  Блог
+                </Link>
               </li>
-              <li>
-                <Link href={'#'}>Про нас</Link>
+              <li className="text-13">
+                <Link href={''} className="brand-color--animate" scroll={false}>
+                  Про нас
+                </Link>
               </li>
 
-              <li>
-                <Link href={'#'}>Навчання</Link>
+              <li className="text-13">
+                <Link href={''} className="brand-color--animate" scroll={false}>
+                  Навчання
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles['footer-box-right']}>
             <h4 className="title-18">О GeniusMarketing</h4>
-            <p>
+            <p className="text-13">
               Україна, Київ, Майдан Незалежності, 2, Spaces Maidan Plaza, 02000
-              <br />
+              <br /> <br />
               +38 044 237 13 18 (Україна), <br />
+              <br />
               info@geniusmarketing.me
             </p>
           </div>
         </div>
-        <div>
-          <div></div>
-          <div></div>
+        <div className={styles['copyright-wrapper']}>
+          <div>
+            <p>© Genius.Space Всі права захищені.</p>
+          </div>
+          <div className={styles['copyright-wrapper_box-right']}>
+            <ul>
+              <li>
+                <Link href={''} className="brand-color--animate">
+                  Умови надання послуг
+                </Link>
+              </li>
+              <li>
+                <Link href={''} className="brand-color--animate">
+                  Політика конфіденційності
+                </Link>
+              </li>
+              <li>
+                <Link href={''} className="brand-color--animate">
+                  Умови повернення
+                </Link>
+              </li>
+              <li>
+                <Link href={''} className="brand-color--animate">
+                  Умови передзамовлення послуг
+                </Link>
+              </li>
+              <li>
+                <Link href={''} className="brand-color--animate">
+                  Постачальники послуг
+                </Link>
+              </li>
+              <li>
+                <Link href={''} className="brand-color--animate">
+                  Попередження
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

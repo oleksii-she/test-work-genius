@@ -53,7 +53,7 @@
   color: var(--brand-primary);
 }
 
-.wrapper_block_center {
+.deadlineWrapper {
   backdrop-filter: blur(38px);
   background: rgba(255, 255, 255, 0.01);
   border-radius: 20px;
@@ -65,7 +65,21 @@
   justify-content: center;
 }
 
-.wrapper_block_center > p:first-child {
+.wrapper_block_center {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1440px) {
+  .deadlineWrapper {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.deadlineWrapper > p:first-child {
   font-weight: 700;
   font-size: 1.6rem;
 
@@ -74,14 +88,14 @@
   margin-top: 25px;
   margin-bottom: 20px;
 }
-.wrapper_block_center p:nth-last-child(2) {
+.deadlineWrapper p:nth-last-child(2) {
   font-weight: 900;
   font-size: 141px;
 
   color: var(--brand-primary);
 }
 
-.wrapper_block_center p:nth-last-child(1) {
+.deadlineWrapper p:nth-last-child(1) {
   font-weight: 700;
   font-size: 29px;
   color: var(--second-text);
@@ -104,15 +118,20 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
-
+  padding-left: 8px;
   color: rgba(255, 255, 255, 0.9);
-  list-style-image: url('/marker.svg');
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-.wrapper_block_right > ul > li {
-  padding-left: 24px;
+
+.wrapper_block_right > ul li {
+  padding-left: 1.4rem;
+}
+
+.wrapper_block_right > ul li::marker {
+  content: url('/marker.svg');
 }
 
 .banks-wrapper {
@@ -152,18 +171,18 @@
     text-align: center;
   }
 
-  .wrapper_block_center {
+  .deadlineWrapper {
     margin: 3rem 0;
     width: 18rem;
     height: auto;
     padding: 2rem;
   }
 
-  .wrapper_block_center p:nth-last-child(2) {
+  .deadlineWrapper p:nth-last-child(2) {
     font-size: 8rem;
   }
 
-  .wrapper_block_center p:nth-last-child(1) {
+  .deadlineWrapper p:nth-last-child(1) {
     font-size: 2.4rem;
   }
 
@@ -197,16 +216,16 @@
     font-size: 1.6rem;
   }
 
-  .wrapper_block_center {
+  .deadlineWrapper {
     width: 14rem;
     padding: 1.6rem;
   }
 
-  .wrapper_block_center p:nth-last-child(2) {
+  .deadlineWrapper p:nth-last-child(2) {
     font-size: 6rem;
   }
 
-  .wrapper_block_center p:nth-last-child(1) {
+  .deadlineWrapper p:nth-last-child(1) {
     font-size: 2rem;
   }
 
@@ -235,16 +254,16 @@
     font-size: 1.4rem;
   }
 
-  .wrapper_block_center {
+  .deadlineWrapper {
     width: 12rem;
     padding: 1.2rem;
   }
 
-  .wrapper_block_center p:nth-last-child(2) {
+  .deadlineWrapper p:nth-last-child(2) {
     font-size: 4.8rem;
   }
 
-  .wrapper_block_center p:nth-last-child(1) {
+  .deadlineWrapper p:nth-last-child(1) {
     font-size: 1.6rem;
   }
 

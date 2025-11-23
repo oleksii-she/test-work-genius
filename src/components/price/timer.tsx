@@ -14,22 +14,24 @@ type TimeLeft = {
   seconds: number;
 };
 
-function getNextFriday() {
+function getNextFridayDeadline() {
   const now = new Date();
-  const day = now.getDay();
+  const day = now.getDay(); // неділя = 0, понеділок = 1 ...
   const daysUntilFriday = (5 - day + 7) % 7 || 7;
   const nextFriday = new Date(now);
   nextFriday.setDate(now.getDate() + daysUntilFriday);
-  nextFriday.setHours(0, 0, 0, 0);
+  nextFriday.setHours(23, 59, 59, 999); // дедлайн на п’ятницю 23:59
   return nextFriday;
 }
 
 export const Timer = ({
   className,
   itemClass,
+  onPriceChange,
 }: {
   className?: string;
   itemClass?: string;
+  onPriceChange?: (newPrice: number) => void;
 }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
@@ -39,19 +41,22 @@ export const Timer = ({
   });
   const [price, setPrice] = useState(START_PRICE);
   const [increments, setIncrements] = useState(0);
-  console.log(price, 'price');
 
   useEffect(() => {
-    const targetDate = getNextFriday().getTime();
+    const targetDate = getNextFridayDeadline().getTime();
 
     const timer = setInterval(() => {
       const now = Date.now();
       const distance = targetDate - now;
 
       if (distance <= 0) {
-        const newIncrements = (increments + 1) % (MAX_INCREMENTS + 1);
+        const newIncrements = (increments + 1) % 5; // максимум 4 підвищення
+        const newPrice = START_PRICE + newIncrements * 1000;
+
         setIncrements(newIncrements);
-        setPrice(START_PRICE + newIncrements * 1000);
+        setPrice(newPrice);
+
+        onPriceChange?.(newIncrements); // 🔑 передаємо кількість підвищень
         clearInterval(timer);
       } else {
         setTimeLeft({
@@ -64,7 +69,7 @@ export const Timer = ({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [increments]);
+  }, [increments, onPriceChange]);
 
   return (
     <div className={`${styles.timer} timer ${className}`}>

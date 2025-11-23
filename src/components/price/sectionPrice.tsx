@@ -1,7 +1,6 @@
 import styles from './sectionPrice.module.css';
 import { Banner } from './banner';
-import { Timer } from './timer';
-
+import { Price } from './price';
 export type PlanKey = 'standard' | 'pro' | 'premium';
 
 export type FeatureValue = boolean | number | string;
@@ -160,47 +159,9 @@ const features: Feature[] = [
   },
 ];
 
-export type SubscriptionType = 'standard' | 'pro' | 'premium';
-
-export interface IPrice {
-  id: number;
-  price: string;
-  oldPrice: string;
-  subscription: SubscriptionType;
-  available: number;
-  maxPlace: number;
-}
-
-export const priceData: IPrice[] = [
-  {
-    id: 1,
-    price: '7 560',
-    oldPrice: '16 000',
-    subscription: 'standard',
-    available: 25,
-    maxPlace: 145,
-  },
-  {
-    id: 2,
-    price: '10 080',
-    oldPrice: '24 000',
-    subscription: 'pro',
-    available: 25,
-    maxPlace: 145,
-  },
-  {
-    id: 3,
-    price: '13 860',
-    oldPrice: '28 000',
-    subscription: 'premium',
-    available: 25,
-    maxPlace: 145,
-  },
-];
-
 export const SectionPrice = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="course">
       <div className={`${styles['container']} container`}>
         <Banner />
 
@@ -385,44 +346,7 @@ export const SectionPrice = () => {
             </tbody>
           </table>
         </div>
-        <div className={styles['price-wrapper']}>
-          <div className={styles['timer-block']}>
-            <p>
-              До <span>підвищення</span> цін залишилося:
-            </p>
-            <Timer
-              className={`${styles.timer}`}
-              itemClass={styles.timer_item}
-            />
-          </div>
-          <div className={styles['price-block']}>
-            {priceData.map((item) => (
-              <div key={item.id} className={styles['price-block__price']}>
-                <p className={styles['old-price']}>
-                  <span>{item.oldPrice}</span> грн
-                </p>
-                <p
-                  className={`${styles['new-price']} ${
-                    styles[`color-${item.subscription}`]
-                  }`}
-                >
-                  <span>{item.price}</span>грн
-                </p>
-                <button className={styles[`bg-color-${item.subscription}`]}>
-                  Залишити заявку
-                </button>
-                <p
-                  className={`${styles['price-block_desc']} ${
-                    styles[`color-${item.subscription}`]
-                  }`}
-                >
-                  Залишилось місць <span>{item.available}</span> з{' '}
-                  {item.maxPlace}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Price />
       </div>
     </section>
   );
