@@ -27,9 +27,9 @@
   padding-right: 6.1rem;
 }
 
-.wrapper_block1 > h2 {
+.wrapper_block_left > h2 {
   font-weight: 800;
-  font-size: 46px;
+  font-size: 4.6rem;
   color: var(--brand-primary);
 
   width: 37.1rem;
@@ -37,15 +37,223 @@
   margin-bottom: 3rem;
 }
 
-.wrapper_block1 > h2 > span {
+.wrapper_block_left > h2 > span {
   color: var(--second-text);
 }
 
-.wrapper_block1 > p {
+.wrapper_block_left > p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
   color: rgba(255, 255, 255, 0.9);
   width: 40rem;
+}
+.wrapper_block1 > p > span {
+  color: var(--brand-primary);
+}
+
+.wrapper_block_center {
+  backdrop-filter: blur(38px);
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 20px;
+  width: 20.1rem;
+  height: 26.8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper_block_center > p:first-child {
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  text-align: center;
+  color: #fff;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.wrapper_block_center p:nth-last-child(2) {
+  font-weight: 900;
+  font-size: 141px;
+
+  color: var(--brand-primary);
+}
+
+.wrapper_block_center p:nth-last-child(1) {
+  font-weight: 700;
+  font-size: 29px;
+  color: var(--second-text);
+}
+
+.wrapper_block_right {
+  width: 302px;
+}
+
+.wrapper_block_right > p {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+  color: var(--second-text);
+
+  margin-bottom: 3rem;
+}
+
+.wrapper_block_right > ul {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+
+  color: rgba(255, 255, 255, 0.9);
+  list-style-image: url('/marker.svg');
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.wrapper_block_right > ul > li {
+  padding-left: 24px;
+}
+
+.banks-wrapper {
+  margin-top: 0.7px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Tablet (<= 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
+  }
+  .banks-wrapper {
+    margin-top: 1em;
+  }
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 0 0;
+    background-size: cover;
+  }
+
+  .wrapper_block_left > h2 {
+    font-size: 3.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .wrapper_block_left > p {
+    font-size: 1.8rem; /* ~18px */
+    width: 100%;
+    text-align: center;
+  }
+
+  .wrapper_block_center {
+    margin: 3rem 0;
+    width: 18rem;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .wrapper_block_center p:nth-last-child(2) {
+    font-size: 8rem;
+  }
+
+  .wrapper_block_center p:nth-last-child(1) {
+    font-size: 2.4rem;
+  }
+
+  .wrapper_block_right {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .wrapper_block_right > p {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .wrapper_block_right > ul {
+    font-size: 1.6rem;
+    gap: 1.2rem;
+  }
+}
+
+/* Mobile (<= 576px) */
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 2rem 1.6rem;
+  }
+
+  .wrapper_block_left > h2 {
+    font-size: 2.4rem;
+  }
+
+  .wrapper_block_left > p {
+    font-size: 1.6rem;
+  }
+
+  .wrapper_block_center {
+    width: 14rem;
+    padding: 1.6rem;
+  }
+
+  .wrapper_block_center p:nth-last-child(2) {
+    font-size: 6rem;
+  }
+
+  .wrapper_block_center p:nth-last-child(1) {
+    font-size: 2rem;
+  }
+
+  .wrapper_block_right > p {
+    font-size: 1.8rem;
+  }
+
+  .wrapper_block_right > ul {
+    font-size: 1.4rem;
+    gap: 1rem;
+    padding: 1.6rem;
+  }
+}
+
+/* Small mobile (<= 380px) */
+@media (max-width: 380px) {
+  .wrapper {
+    padding: 1.6rem;
+  }
+
+  .wrapper_block_left > h2 {
+    font-size: 2rem;
+  }
+
+  .wrapper_block_left > p {
+    font-size: 1.4rem;
+  }
+
+  .wrapper_block_center {
+    width: 12rem;
+    padding: 1.2rem;
+  }
+
+  .wrapper_block_center p:nth-last-child(2) {
+    font-size: 4.8rem;
+  }
+
+  .wrapper_block_center p:nth-last-child(1) {
+    font-size: 1.6rem;
+  }
+
+  .wrapper_block_right > p {
+    font-size: 1.6rem;
+  }
+
+  .wrapper_block_right > ul {
+    font-size: 1.2rem;
+    gap: 0.8rem;
+  }
 }
