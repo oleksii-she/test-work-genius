@@ -17,7 +17,7 @@ const gilroy = localFont({
       style: 'normal',
     },
     {
-      path: '../public/fonts/Gilroy-semibold.ttf',
+      path: '../public/fonts/Gilroy-Semibold.ttf',
       weight: '600',
       style: 'normal',
     },
