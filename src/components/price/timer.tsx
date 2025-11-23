@@ -45,7 +45,7 @@ export const Timer = ({
     const targetDate = getNextFriday().getTime();
 
     const timer = setInterval(() => {
-      const now = new Date().getTime();
+      const now = Date.now();
       const distance = targetDate - now;
 
       if (distance <= 0) {

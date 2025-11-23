@@ -96,51 +96,8 @@ table th:first-child {
   background-color: var(--secondBg);
 }
 
-/* .button-info {
-  background-color: transparent;
-
-  border: none;
-}
-
-.button-info svg:hover {
-  stroke: var(--standard-bg);
-
-  cursor: pointer;
-  transition: var(--default-transition);
-}
-
-.info_block_wrapper {
-  position: relative;
-}
-
-.info_desc_wrapper {
-  background-image: url('/info.svg');
-
-  width: 457px;
-
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 69%;
-  right: -105px;
-  z-index: 10;
-  padding: 12px 20px 60px 40px;
-}
-
-.info_desc_wrapper ul {
-  margin: 0.5rem 0 0;
-  text-align: start;
-
-  width: 100%;
-  height: 100%;
-  font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 120%;
-}
- */
-
 .feature_info {
   position: relative;
-  /* щоб :hover/:focus-within спрацьовували по всьому td */
 }
 
 .feature_info_title {
@@ -149,7 +106,6 @@ table th:first-child {
   gap: 6px;
 }
 
-/* кнопка: без стандартного фокуса, але доступна клавіатурно */
 .feature_info_btn {
   background: transparent;
   border: none;
@@ -160,7 +116,6 @@ table th:first-child {
   justify-content: center;
 }
 
-/* іконка (можеш налаштувати) */
 .feature_info_icon {
   display: block;
 }
