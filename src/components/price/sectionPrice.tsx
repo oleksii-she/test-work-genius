@@ -1,6 +1,6 @@
 import styles from './sectionPrice.module.css';
-import { Banner } from './banner';
-import { Timer } from './timer';
+/* import { Banner } from './banner';
+import { Timer } from './timer'; */
 
 export type PlanKey = 'standard' | 'pro' | 'premium';
 
