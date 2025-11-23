@@ -109,12 +109,6 @@ body {
     transition: var(--default-transition);
   }
 
-  .button-course {
-    width: 272px;
-
-    height: 56px;
-  }
-
   .button-course-hover:hover {
     background: var(--active-nav);
     border-color: var(--active-nav);
