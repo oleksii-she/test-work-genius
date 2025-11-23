@@ -39,6 +39,7 @@ export const Timer = ({
   });
   const [price, setPrice] = useState(START_PRICE);
   const [increments, setIncrements] = useState(0);
+  console.log(price, 'price');
 
   useEffect(() => {
     const targetDate = getNextFriday().getTime();
