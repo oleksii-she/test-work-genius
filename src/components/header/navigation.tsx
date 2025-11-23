@@ -21,7 +21,9 @@ export const NavigationList = () => {
             onClick={() => {
               setActiveHash(item.href);
             }}
-            className={activeHash === item.href ? 'active' : ''}
+            className={
+              activeHash === item.href ? 'active' : 'brand-color--animate'
+            }
           >
             {item.label}
           </Link>

@@ -41,6 +41,7 @@ html {
   --table-color: #f4f5f7;
   --premium-bg: #5b9aff;
   --standard-bg: #fea800;
+  --bg-footer: #232326;
   /* animate */
 
   --default-transition: all 0.3s ease;
@@ -163,12 +164,25 @@ body {
   height: auto;
 }
 
+/* animation */
+
+/* animation text purple */
+.brand-color--animate:hover {
+  color: var(--brand-primary);
+  transition: var(--default-transition);
+}
 /* container */
 
 .container {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.title-18 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 133%;
 }
 
 /* tablet */
