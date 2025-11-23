@@ -18,6 +18,7 @@ export const NavigationList = () => {
         <li key={item.id}>
           <Link
             href={`/${item.href}`}
+            scroll={false}
             onClick={() => {
               setActiveHash(item.href);
             }}

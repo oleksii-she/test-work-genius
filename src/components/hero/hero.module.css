@@ -2,48 +2,59 @@
   padding-top: 2rem;
 }
 
-@media (min-width: 992px) {
-  .hero {
-    padding-top: 3.6rem;
+.hero_wrapper {
+  display: flex;
+}
+
+.hero_wrapper__text-block {
+  flex: 0 0 auto;
+}
+.hero_wrapper__image-block {
+  display: block;
+  position: relative;
+  flex: 1;
+}
+
+@media (max-width: 1439) {
+  .hero_wrapper__image-block {
+    display: none;
   }
+}
+
+.decor-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .list-course {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 3.7rem;
   list-style: none;
-  margin-bottom: 5rem;
-
-  max-width: 30rem;
+  margin-bottom: 5.3rem;
 }
 
 .list-course li {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.2rem;
+  font-family: var(--font-family);
   font-weight: 600;
+  font-size: 1.6rem;
   line-height: 132%;
-  font-size: 2.1rem;
   text-align: center;
+  color: var(--second-text);
 }
 
 .list-course li div {
-  width: 5.71rem;
-  height: 5.71rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background: #fff3;
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.list-course li div img {
-  width: 2.86rem;
-  height: 2.86rem;
-  position: absolute;
+  justify-content: center;
 }
 
 .hero__title-block {
@@ -55,15 +66,18 @@
 
 .hero__title-block h1 {
   font-weight: 700;
-  font-size: 20rem;
+  font-size: 24.1rem;
   text-transform: uppercase;
   color: var(--brand-primary);
   line-height: 0.75;
 }
 
 .hero__title-block p {
-  width: 100%;
-  font-size: 2.1rem;
+  width: 25rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .hero__title-block p span {
@@ -73,6 +87,7 @@
 .hero__subtitle-block h2 {
   font-weight: 700;
   font-size: 7rem;
+  line-height: 100%;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 4rem;
@@ -83,6 +98,7 @@
   font-size: 2.6rem;
   line-height: 140%;
   color: #fff;
+  width: 50.3rem;
   margin-bottom: 8.4rem;
 }
 
@@ -90,202 +106,123 @@
   font-weight: 500;
 }
 
-@media (min-width: 992px) {
-  .hero_wrapper {
-    display: flex;
-  }
-
-  .hero_wrapper__text-block {
-    flex: 0 0 auto;
-  }
-  .hero_wrapper__image-block {
-    display: none;
-    position: relative;
-    flex: 1;
-  }
-
-  .list-course {
-    display: flex;
-    align-items: center;
-    gap: 37px;
-    list-style: none;
-    margin-bottom: 53px;
-  }
-
-  .list-course li {
-    font-weight: 600;
-    line-height: 132%;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .hero__title-block {
-    display: flex;
-    align-items: flex-start;
-    gap: 17px;
-    margin-bottom: 16px;
-  }
-  .hero__title-block h1 {
-    font-weight: 700;
-    font-size: 24.1rem;
-    text-transform: uppercase;
-    color: var(--brand-primary);
-    line-height: 0.75;
-  }
-
-  .hero__title-block p {
-    width: 250px;
-  }
-
-  .hero__title-block p span {
-    font-weight: 800;
-  }
-
-  .hero__subtitle-block h2 {
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 40px;
-  }
-
-  .hero__subtitle-block p {
-    font-weight: 800;
-    font-size: 26px;
-    line-height: 140%;
-    color: #fff;
-    width: 503px;
-    margin-bottom: 84px;
-  }
-
-  .hero__subtitle-block p span {
-    font-weight: 500;
-  }
-
-  .hero__image-block__decor-wrapper {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-  }
-  .hero__image-block__decor--1 {
-    background-image: url('/images/hero/Union.png');
-    width: 416px;
-    height: 414px;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-
-  .hero__image-block__decor--1::before {
-    content: '';
-    z-index: 1;
-    background-image: url(/images/hero/Untitled.png);
-    background-repeat: no-repeat;
-    background-size: 164px 147px;
-    width: 164px;
-    height: 147px;
-    right: 23px;
-    top: 33px;
-    position: absolute;
-  }
-
-  .hero__image-block__decor--1::after {
-    content: '';
-    z-index: 1;
-    background-image: url(/images/hero/Object.png);
-    background-repeat: no-repeat;
-    background-size: 164px 147px;
-    width: 164px;
-    height: 147px;
-    position: absolute;
-    bottom: 35px;
-    left: 32px;
-  }
-
-  .hero__image-block__decor--2 {
-    background-color: var(--brand-primary);
-    background-repeat: no-repeat;
-    border: 1px solid #000;
-    border-radius: 29px;
-    width: 189px;
-
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 54px;
-    padding-bottom: 54px;
-  }
-
-  .hero__image-block__decor--2::before {
-    content: 'ТОП спiкери';
-    margin-bottom: 39px;
-    width: 84px;
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 110%;
-    text-align: center;
-    color: #fff;
-  }
-
-  .hero__image-block__decor--2::after {
-    content: '';
-    z-index: 1;
-    background-image: url(/images/hero/group-photo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    width: 103px;
-    height: 235px;
-  }
-
-  .hero__image-block__decor--3 {
-    background-image: url('/images/hero/Union (1).png');
-
-    width: 457px;
-    height: 455px;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 246px;
-
-    right: 0;
-  }
-
-  .hero__image-block__decor--4 {
-    background-image: url('/images/hero/Ellipse 238.png');
-
-    width: 244px;
-    height: 244px;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-size: 100% 100%;
-    bottom: 0;
-    z-index: 1;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero__image-block__decor--4::before {
-    content: '';
-    z-index: 1;
-    background-image: url(/images/hero/1111.png);
-    background-repeat: no-repeat;
-
-    background-size: contain;
-    width: 186px;
-    height: 167px;
-    mix-blend-mode: color-dodge;
-    position: absolute;
-  }
+.hero__image-block__decor-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
-@media (min-width: 1440px) {
-  .hero_wrapper__image-block {
-    display: block;
-  }
+.hero__image-block__decor--1 {
+  background-image: url('/images/hero/Union.png');
+  width: 41.6rem;
+  height: 41.4rem;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero__image-block__decor--1::before {
+  content: '';
+  z-index: 1;
+  background-image: url(/images/hero/Untitled.png);
+  background-repeat: no-repeat;
+  background-size: 16.4rem 14.7rem;
+  width: 16.4rem;
+  height: 14.7rem;
+  right: 2.3rem;
+  top: 3.3rem;
+  position: absolute;
+}
+
+.hero__image-block__decor--1::after {
+  content: '';
+  z-index: 1;
+  background-image: url(/images/hero/Object.png);
+  background-repeat: no-repeat;
+  background-size: 16.4rem 14.7rem;
+  width: 16.4rem;
+  height: 14.7rem;
+  position: absolute;
+  bottom: 3.5rem;
+  left: 3.2rem;
+}
+
+.hero__image-block__decor--2 {
+  background-color: var(--brand-primary);
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  border-radius: 2.9rem;
+  width: 18.9rem;
+
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5.4rem;
+  padding-bottom: 5.4rem;
+}
+
+.hero__image-block__decor--2::before {
+  content: 'ТОП спiкери';
+  margin-bottom: 3.9rem;
+  width: 8.4rem;
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 110%;
+  text-align: center;
+  color: #fff;
+}
+
+.hero__image-block__decor--2::after {
+  content: '';
+  z-index: 1;
+  background-image: url(/images/hero/group-photo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 10.3rem;
+  height: 23.5rem;
+}
+
+.hero__image-block__decor--3 {
+  background-image: url('/images/hero/Union (1).png');
+
+  width: 45.7rem;
+  height: 45.5rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 24.6rem;
+
+  right: 0;
+}
+
+.hero__image-block__decor--4 {
+  background-image: url('/images/hero/Ellipse 238.png');
+
+  width: 24.4rem;
+  height: 24.4rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 100% 100%;
+  top: 108%;
+  z-index: 1;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__image-block__decor--4::before {
+  content: '';
+  z-index: 1;
+  background-image: url(/images/hero/1111.png);
+  background-repeat: no-repeat;
+
+  background-size: contain;
+  width: 18.6rem;
+  height: 16.7rem;
+  mix-blend-mode: color-dodge;
+  position: absolute;
 }
