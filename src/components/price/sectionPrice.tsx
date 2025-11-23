@@ -202,7 +202,7 @@ export const SectionPrice = () => {
   return (
     <section className={styles.section}>
       <div className={`${styles['container']} container`}>
-        <Banner />
+        {/*       <Banner /> */}
 
         <div className={styles.content_wrapper}>
           <div className={styles['wrapper']}>
@@ -390,10 +390,10 @@ export const SectionPrice = () => {
             <p>
               До <span>підвищення</span> цін залишилося:
             </p>
-            <Timer
+            {/*       <Timer
               className={`${styles.timer}`}
               itemClass={styles.timer_item}
-            />
+            /> */}
           </div>
           <div className={styles['price-block']}>
             {priceData.map((item) => (
