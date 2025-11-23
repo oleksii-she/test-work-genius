@@ -10,8 +10,7 @@ export default function Home() {
       <main className={styles.main}>
         <Hero />
         <SectionEducation />
-        <h2>test</h2>
-        <SectionPrice />
+        {/* <SectionPrice /> */}
         <SectionInstallment />
       </main>
     </div>
