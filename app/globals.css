@@ -30,13 +30,24 @@ html {
   /* color */
   --active-nav: #8b57c2;
   --brand-primary: #8b57c2;
+  --dark-text: #000;
   --main-text: rgba(255, 255, 255, 0.7);
-  --white: #ffffff;
+  --second-text: #fff;
+  --secondBg: #ffffff;
   --background: #121212;
-
+  --accent-pink: #ff7ef2;
+  --accent-yellow: #fecb00;
+  --banner-desc-bg: #e8ddf3;
+  --table-color: #f4f5f7;
+  --premium-bg: #5b9aff;
+  --standard-bg: #fea800;
   /* animate */
 
   --default-transition: all 0.3s ease;
+  --shadow: #00000021;
+
+  --radius: 1.2rem;
+  --gap: 3rem;
 }
 
 body * {
@@ -191,6 +202,13 @@ body {
 @media (min-width: 1440px) {
   .container {
     padding: 0 100px;
-    max-width: 1240px;
+    max-width: 1440px;
   }
+}
+
+.title-black {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 120%;
+  color: var(--dark-text);
 }

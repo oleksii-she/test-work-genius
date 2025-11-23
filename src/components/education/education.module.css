@@ -1,13 +1,6 @@
-:root {
-  --accent-pink: #ff7ef2;
-  --accent-yellow: #fecb00;
-  --accent-purple: #8b57c2;
-  --radius: 1.2rem;
-  --gap: 3rem;
-}
-
 .section {
   padding-top: 7.3rem;
+  padding-bottom: 4.1rem;
 }
 .header {
   text-align: center;

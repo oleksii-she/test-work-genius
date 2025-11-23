@@ -1,0 +1,30 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.timer .timer_item {
+  background-color: var(--secondBg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 61px;
+  height: 61px;
+  border-radius: 4px;
+}
+
+.timer div p {
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--dark-text);
+}
+
+.timer div span {
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--dark-text);
+}
