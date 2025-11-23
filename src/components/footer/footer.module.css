@@ -1,0 +1,41 @@
+.footer {
+  background-color: var(--bg-footer);
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--second-text);
+
+  padding-top: 4.4rem;
+  padding-bottom: 5.8rem;
+}
+
+.footer-box-Left > p {
+  margin-top: 2.2rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 133%;
+  width: 20.6rem;
+}
+
+.footer-box-Left > h4 {
+  margin-bottom: 2rem;
+}
+
+.footer-box-Left a svg {
+  color: var(--second-text);
+}
+
+.footer-box-Left a svg:hover {
+  color: var(--brand-primary);
+  transition: var(--default-transition);
+}
+
+.footer-box-center {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
