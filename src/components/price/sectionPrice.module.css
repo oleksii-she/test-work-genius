@@ -496,12 +496,6 @@ table th:first-child {
     left: 50%;
     transform: translateX(-50%);
   }
-
-  /* .ribbon_wrapper::before {
-    font-size: 1rem;
-    top: 0.8rem;
-    left: -2rem;
-  } */
 }
 
 .price-wrapper {
