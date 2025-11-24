@@ -29,7 +29,7 @@ export const SectionInstallment = () => {
             <div className={styles['banks-wrapper']}>
               <Image
                 src={'/privatBank.svg'}
-                alt="Privat bank"
+                alt="privat bank"
                 width={115}
                 height={21}
               />
