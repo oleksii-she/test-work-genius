@@ -152,13 +152,12 @@
   }
   .wrapper {
     background-image: url(/images/mobile-bg.png);
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: auto;
     padding: 0 0;
-    background-size: 50% 50%;
+    background-size: cover;
   }
 
   .wrapper_block_left > h2 {
@@ -209,7 +208,7 @@
   .wrapper {
     padding: 2rem 1.6rem;
 
-    background-size: 70% 70%;
+    background-size: 100% 55%;
   }
 
   .wrapper_block_left > h2 {

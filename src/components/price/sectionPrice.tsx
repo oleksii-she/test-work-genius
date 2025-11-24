@@ -256,9 +256,13 @@ export const SectionPrice = () => {
             <div className={styles.cardsWrapper}>
               {/* Left card */}
               <div className={styles.card}>
-                <div className={styles.bonus}>+ BONUS</div>
-                <h3 className={styles.cardTitle}>Standart</h3>
-                <p className={styles.cardText}>Бонуси уточнюйте у менеджера</p>
+                <div>
+                  <div className={styles.bonus}>+ BONUS</div>
+                  <h3 className={styles.cardTitle}>Standart</h3>
+                  <p className={styles.cardText}>
+                    Бонуси уточнюйте у менеджера
+                  </p>
+                </div>
               </div>
 
               {/* Middle card (overlapping) */}

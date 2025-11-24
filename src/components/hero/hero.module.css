@@ -261,15 +261,17 @@
 @media (max-width: 992px) {
   .hero__title-block h1 {
     font-size: 12rem;
+    margin-bottom: 0;
   }
 
   .hero__subtitle-block h2 {
     font-size: 4rem;
+    margin-bottom: 1rem;
   }
 
   .hero__subtitle-block p {
     font-size: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -290,7 +292,7 @@
   }
 
   .hero__title-block h1 {
-    font-size: 8rem;
+    font-size: 20rem;
   }
 
   .hero__subtitle-block h2 {
@@ -298,16 +300,16 @@
   }
 
   .hero__subtitle-block p {
-    font-size: 1.6rem;
-    max-width: 30rem;
+    font-size: 2.28rem;
+    max-width: 47rem;
   }
 
   .list-course li {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .list-course li div {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
 }
