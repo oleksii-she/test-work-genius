@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import styles from './installmentSection.module.css';
 import { OfferDeadline } from './OfferDeadline';
@@ -27,12 +28,11 @@ export const SectionInstallment = () => {
               <li>Оплачуйте частинами без переплат через:</li>
             </ul>
             <div className={styles['banks-wrapper']}>
-              <Image
-                src={'/privatBank.svg'}
+              <img
+                src={'/privtBank.svg'}
                 alt="privat bank"
                 width={115}
                 height={21}
-                unoptimized
               />
               <Image
                 src={'/monoBank.png'}
