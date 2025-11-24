@@ -4,9 +4,11 @@
   padding-bottom: 12.2rem;
 }
 
-.container {
-  padding-left: 12rem;
-  padding-right: 12rem;
+@media (min-width: 1440px) {
+  .container {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
 }
 
 .content_wrapper {
@@ -337,7 +339,7 @@ table th:first-child {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .cards {
     grid-template-columns: 1fr;
   }
@@ -345,7 +347,7 @@ table th:first-child {
   .cardPro {
     transform: none;
   }
-}
+} */
 
 .title {
   font-size: 32px;
@@ -384,7 +386,7 @@ table th:first-child {
 }
 
 /* Mobile */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .cardsWrapper {
     flex-direction: column;
     gap: 20px;
@@ -403,7 +405,134 @@ table th:first-child {
     width: 100%;
     height: auto;
   }
+} */
+
+/* Tablet / Small desktop */
+@media (max-width: 1200px) {
+  .wrapper__title {
+    font-size: 3.5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .cardsWrapper {
+    gap: 1.5rem;
+  }
+
+  .card,
+  .cardPro {
+    width: 220px;
+    height: 160px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+
+  .cardText,
+  .cardTextPro {
+    font-size: 0.9rem;
+  }
+
+  .bonus,
+  .bonusPro {
+    font-size: 1.2rem;
+  }
+
+  .ribbon_wrapper::before {
+    font-size: 1.2rem;
+    top: 1rem;
+    left: -2.5rem;
+  }
 }
+
+/* Tablets / Mobile landscape */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper__title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .cardsWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .cardPro,
+  .card {
+    width: 90%;
+    height: auto;
+    position: relative;
+    transform: none;
+    left: 0;
+    right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardText,
+  .cardTextPro {
+    font-size: 0.85rem;
+  }
+
+  .bonusPro {
+    font-size: 1rem;
+  }
+  .bonus {
+    font-size: 1rem;
+    top: -1rem;
+    width: 6rem;
+    height: 2.5rem;
+  }
+
+  .ribbon_wrapper::before {
+    font-size: 1rem;
+    top: 0.8rem;
+    left: -2rem;
+  }
+}
+
+/* Mobile portrait */
+/* @media (max-width: 480px) {
+  .wrapper__title {
+    font-size: 2.2rem;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardText,
+  .cardTextPro {
+    font-size: 0.75rem;
+  }
+
+  .bonus,
+  .bonusPro {
+    font-size: 0.9rem;
+    width: 5.5rem;
+    height: 2.2rem;
+  }
+
+  .ribbon_wrapper::before {
+    font-size: 0.9rem;
+    top: 0.6rem;
+    left: -1.8rem;
+  }
+} */
 
 .price-wrapper {
   padding-top: 4rem;
@@ -465,9 +594,9 @@ table th:first-child {
 
 .price-block button {
   border-radius: 8px;
-  padding: 18px 28px;
-  width: 186px;
-  height: 55px;
+  padding: 1.8rem 2.8rem;
+  width: 18.6rem;
+  height: 5.5rem;
   border: none;
   color: var(--secondBg);
 
@@ -513,4 +642,27 @@ table th:first-child {
 
 .timer-block p span {
   font-weight: 700;
+}
+
+@media (max-width: 920px) {
+  .price-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .price-block {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 374px) {
+  .price-block {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
