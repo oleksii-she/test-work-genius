@@ -64,7 +64,6 @@ body {
   background-color: var(--background);
   color: var(--main-text);
   font-family: var(--font-gilroy);
-  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
 }
@@ -72,10 +71,6 @@ body {
 .button-course-hover:active {
   background: var(--active-nav);
   color: #fff;
-}
-
-.mobile-hide {
-  display: none;
 }
 
 .button-course {
@@ -181,6 +176,24 @@ body {
 .text-13 {
   font-weight: 400;
   font-size: 1.3rem;
+}
+
+@media (max-width: 576px) {
+  .mobile-hide {
+    display: none;
+  }
+
+  .navigation ul li {
+    font-size: 1.875rem;
+  }
+}
+
+/* mobile menu */
+
+@media (max-width: 576px) {
+  body.menu-open {
+    overflow: hidden;
+  }
 }
 
 /* tablet */

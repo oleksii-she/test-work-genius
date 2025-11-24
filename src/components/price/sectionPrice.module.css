@@ -12,7 +12,6 @@
 }
 
 .content_wrapper {
-  overflow-x: auto;
   color: black;
   margin-top: 10rem;
 }
@@ -22,6 +21,8 @@
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 0.8rem;
+
+  overflow-x: auto;
 }
 
 .table thead {
@@ -338,17 +339,6 @@ table th:first-child {
   text-align: center;
 }
 
-/* Responsive */
-/* @media (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .cardPro {
-    transform: none;
-  }
-} */
-
 .title {
   font-size: 32px;
   font-weight: 700;
@@ -384,28 +374,6 @@ table th:first-child {
 .card:first-child {
   right: -8px;
 }
-
-/* Mobile */
-/* @media (max-width: 900px) {
-  .cardsWrapper {
-    flex-direction: column;
-    gap: 20px;
-    padding-top: 0;
-  }
-
-  .cardPro {
-    position: relative;
-    transform: none;
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .card {
-    width: 100%;
-    height: auto;
-  }
-} */
 
 /* Tablet / Small desktop */
 @media (max-width: 1200px) {
@@ -504,35 +472,6 @@ table th:first-child {
     left: -2rem;
   }
 }
-
-/* Mobile portrait */
-/* @media (max-width: 480px) {
-  .wrapper__title {
-    font-size: 2.2rem;
-  }
-
-  .cardTitle {
-    font-size: 18px;
-  }
-
-  .cardText,
-  .cardTextPro {
-    font-size: 0.75rem;
-  }
-
-  .bonus,
-  .bonusPro {
-    font-size: 0.9rem;
-    width: 5.5rem;
-    height: 2.2rem;
-  }
-
-  .ribbon_wrapper::before {
-    font-size: 0.9rem;
-    top: 0.6rem;
-    left: -1.8rem;
-  }
-} */
 
 .price-wrapper {
   padding-top: 4rem;
