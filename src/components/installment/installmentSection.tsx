@@ -32,6 +32,7 @@ export const SectionInstallment = () => {
                 alt="privat bank"
                 width={115}
                 height={21}
+                unoptimized
               />
               <Image
                 src={'/monoBank.png'}
