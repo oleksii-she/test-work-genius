@@ -446,6 +446,7 @@ table th:first-child {
     gap: 0px;
     padding-top: 0;
     width: 100%;
+    text-align: center;
   }
 
   .cardPro,
@@ -488,10 +489,12 @@ table th:first-child {
     font-size: 1rem;
   }
   .bonus {
-    font-size: 1rem;
-    top: -1rem;
     width: 6rem;
     height: 2.5rem;
+    font-size: 1rem;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* .ribbon_wrapper::before {
