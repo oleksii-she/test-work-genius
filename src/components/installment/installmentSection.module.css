@@ -62,7 +62,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding-top: 3.4rem;
+  padding-bottom: 3.1rem;
 }
 
 .wrapper_block_center {
@@ -71,7 +73,7 @@
   height: 100%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .deadlineWrapper {
     position: absolute;
     right: 50%;
@@ -82,12 +84,13 @@
 .deadlineWrapper > p:first-child {
   font-weight: 700;
   font-size: 1.6rem;
-
+  max-width: 11rem;
   text-align: center;
   color: #fff;
-  margin-top: 25px;
+
   margin-bottom: 20px;
 }
+
 .deadlineWrapper p:nth-last-child(2) {
   font-weight: 900;
   font-size: 141px;
@@ -141,8 +144,11 @@
   gap: 1.2rem;
 }
 
-/* Tablet (<= 992px) */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+  }
   .container {
     padding-left: 2.1rem;
     padding-right: 2.1rem;
@@ -160,6 +166,10 @@
     background-size: cover;
   }
 
+  .wrapper_block_left {
+    margin-bottom: 2rem;
+  }
+
   .wrapper_block_left > h2 {
     font-size: 3.2rem;
     width: 100%;
@@ -173,7 +183,6 @@
   }
 
   .deadlineWrapper {
-    margin: 3rem 0;
     width: 18rem;
     height: auto;
     padding: 2rem;
@@ -195,6 +204,7 @@
   .wrapper_block_right > p {
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 0;
   }
 
   .wrapper_block_right > ul {
