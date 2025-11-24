@@ -14,15 +14,20 @@
 .content_wrapper {
   color: black;
   margin-top: 10rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.table {
+.table-wrapper {
   width: 100%;
+  overflow-x: auto;
+  overflow-y: clip;
+}
+.table {
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 0.8rem;
-
-  overflow-x: auto;
+  width: 100%;
 }
 
 .table thead {
@@ -470,13 +475,6 @@ table th:first-child {
     font-size: 1rem;
     top: 0.8rem;
     left: -2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
 

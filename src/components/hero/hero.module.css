@@ -1,9 +1,23 @@
 .hero {
   padding-top: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  background-image: url(/images/hero/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  background-position: right;
+  width: 100%;
+  height: 120rem;
+  position: absolute;
 }
 
 .hero_wrapper {
   display: flex;
+  position: relative;
 }
 
 .hero_wrapper__text-block {
@@ -13,12 +27,6 @@
   display: block;
   position: relative;
   flex: 1;
-}
-
-@media (max-width: 1439) {
-  .hero_wrapper__image-block {
-    display: none;
-  }
 }
 
 .decor-wrapper {
@@ -98,8 +106,15 @@
   font-size: 2.6rem;
   line-height: 140%;
   color: #fff;
-  width: 50.3rem;
+  width: 100%;
+  max-width: 50.3rem;
   margin-bottom: 8.4rem;
+}
+
+@media (max-width: 1439) {
+  .hero_wrapper__image-block {
+    display: none;
+  }
 }
 
 .hero__subtitle-block p span {
@@ -225,4 +240,74 @@
   height: 16.7rem;
   mix-blend-mode: color-dodge;
   position: absolute;
+}
+
+/* Екрани до 1440px */
+@media (max-width: 1440px) {
+  .hero__title-block h1 {
+    font-size: 18rem;
+  }
+
+  .hero__subtitle-block h2 {
+    font-size: 5.5rem;
+  }
+
+  .hero__subtitle-block p {
+    font-size: 2.2rem;
+  }
+}
+
+/* Екрани до 992px (tablet) */
+@media (max-width: 992px) {
+  .hero__title-block h1 {
+    font-size: 12rem;
+  }
+
+  .hero__subtitle-block h2 {
+    font-size: 4rem;
+  }
+
+  .hero__subtitle-block p {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/* Екрани до 576px (mobile) */
+@media (max-width: 576px) {
+  .hero_wrapper__text-block {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero__subtitle-block {
+    display: block;
+    width: 100%;
+  }
+  .hero::before {
+    height: 60rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero__title-block h1 {
+    font-size: 8rem;
+  }
+
+  .hero__subtitle-block h2 {
+    font-size: 3rem;
+  }
+
+  .hero__subtitle-block p {
+    font-size: 1.6rem;
+    max-width: 30rem;
+  }
+
+  .list-course li {
+    font-size: 1.4rem;
+  }
+
+  .list-course li div {
+    width: 3rem;
+    height: 3rem;
+  }
 }
