@@ -85,6 +85,7 @@
   opacity: 1;
   pointer-events: auto;
 }
+
 @media (min-width: 992px) {
   .mobileModal {
     display: none;
