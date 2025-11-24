@@ -14,15 +14,20 @@
 .content_wrapper {
   color: black;
   margin-top: 10rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.table {
+.table-wrapper {
   width: 100%;
+  overflow-x: auto;
+  overflow-y: clip;
+}
+.table {
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 0.8rem;
-
-  overflow-x: auto;
+  width: 100%;
 }
 
 .table thead {
@@ -377,6 +382,14 @@ table th:first-child {
 
 /* Tablet / Small desktop */
 @media (max-width: 1200px) {
+  .section {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+  }
+
+  .content_wrapper {
+    margin-top: 4rem;
+  }
   .wrapper__title {
     font-size: 3.5rem;
     width: 100%;
@@ -408,11 +421,11 @@ table th:first-child {
     font-size: 1.2rem;
   }
 
-  .ribbon_wrapper::before {
+  /* .ribbon_wrapper::before {
     font-size: 1.2rem;
     top: 1rem;
     left: -2.5rem;
-  }
+  } */
 }
 
 /* Tablets / Mobile landscape */
@@ -443,9 +456,24 @@ table th:first-child {
     transform: none;
     left: 0;
     right: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
+
+  .cardPro {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .cardPro div {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* .bonusPro {
+    padding: 0;
+  } */
 
   .cardTitle {
     font-size: 20px;
@@ -466,11 +494,11 @@ table th:first-child {
     height: 2.5rem;
   }
 
-  .ribbon_wrapper::before {
+  /* .ribbon_wrapper::before {
     font-size: 1rem;
     top: 0.8rem;
     left: -2rem;
-  }
+  } */
 }
 
 .price-wrapper {
