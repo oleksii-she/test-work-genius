@@ -19,15 +19,18 @@ const features: Feature[] = [
     description: [
       {
         id: 'basic_course-desc-1',
-        text: 'Навчитесь користуватися популярними нейромережами',
+        text: 'Отримаєте базові знання для старту роботи з AI.',
       },
-      { id: 'basic_course-desc-2', text: 'Опануєте основи автоматизації' },
+      {
+        id: 'basic_course-desc-2',
+        text: 'Навчитесь застосовувати інструменти у реальних задачах.',
+      },
+      {
+        id: 'basic_course-desc-3',
+        text: 'Зрозумієте ключові принципи сучасних нейромереж.',
+      },
     ],
-    values: {
-      standard: true,
-      pro: true,
-      premium: true,
-    },
+    values: { standard: true, pro: true, premium: true },
   },
   {
     id: 'curator',
@@ -35,86 +38,138 @@ const features: Feature[] = [
     description: [
       {
         id: 'curator-desc-1',
-        text: 'Навчитесь користуватися популярними нейромережами',
+        text: 'Отримуйте фідбек від практикуючих спеціалістів.',
       },
-      { id: 'curator-desc-2', text: 'Опануєте основи автоматизації' },
-      { id: 'curator-desc-3', text: 'Опануєте основи автоматизації' },
-      { id: 'curator-desc-4', text: 'Опануєте основи автоматизації' },
-      { id: 'curator-desc-5', text: 'Опануєте основи автоматизації' },
-      { id: 'curator-desc-6', text: 'Опануєте основи автоматизації' },
+      {
+        id: 'curator-desc-2',
+        text: 'Допомога у проходженні завдань та розборі помилок.',
+      },
+      {
+        id: 'curator-desc-3',
+        text: 'Підтримка під час навчання, щоб не зупинятись.',
+      },
     ],
-    values: {
-      standard: false,
-      pro: true,
-      premium: true,
-    },
+    values: { standard: false, pro: true, premium: true },
   },
   {
     id: 'telegram_chat',
     title: 'Чат в Telegram з кураторами та ментором',
-    values: {
-      standard: false,
-      pro: true,
-      premium: true,
-    },
+    description: [
+      {
+        id: 'telegram_chat-desc-1',
+        text: 'Оперативні відповіді на будь-які питання.',
+      },
+      {
+        id: 'telegram_chat-desc-2',
+        text: 'Обговорення уроків та спільне вирішення задач.',
+      },
+    ],
+    values: { standard: false, pro: true, premium: true },
   },
   {
     id: 'chatgpt_bonus',
     title: 'Бонусний курс по ChatGPT',
-    values: {
-      standard: true,
-      pro: true,
-      premium: true,
-    },
+    description: [
+      {
+        id: 'chatgpt_bonus-desc-1',
+        text: 'Опануєте просунуті техніки роботи з ChatGPT.',
+      },
+      {
+        id: 'chatgpt_bonus-desc-2',
+        text: 'Дізнаєтесь, як налаштовувати рольові моделі та промпти.',
+      },
+    ],
+    values: { standard: true, pro: true, premium: true },
   },
   {
     id: 'test_tasks',
     title: 'Тестові завдання на закріплення знань',
-    values: {
-      standard: '1 місяць',
-      pro: '6 місяців',
-      premium: '12 місяців',
-    },
+    description: [
+      {
+        id: 'test_tasks-desc-1',
+        text: 'Кожний блок містить практичні завдання.',
+      },
+      {
+        id: 'test_tasks-desc-2',
+        text: 'Формуєте портфоліо реальних кейсів у процесі навчання.',
+      },
+    ],
+    values: { standard: '1 місяць', pro: '6 місяців', premium: '12 місяців' },
   },
   {
     id: 'other',
     title: '',
-    values: {
-      standard: false,
-      pro: 2,
-      premium: 4,
-    },
+    description: [
+      {
+        id: 'other-desc-1',
+        text: 'Додаткові бонуси, що відкриваються у міру навчання.',
+      },
+      {
+        id: 'other-desc-2',
+        text: 'Спеціальні матеріали для поглиблення навичок.',
+      },
+    ],
+    values: { standard: false, pro: 2, premium: 4 },
   },
   {
     id: 'qa_sessions',
     title: 'Q&A-сесії',
-    values: {
-      standard: false,
-      pro: 2,
-      premium: 8,
-    },
+    description: [
+      {
+        id: 'qa_sessions-desc-1',
+        text: 'Живі відповіді на запитання від експертів.',
+      },
+      { id: 'qa_sessions-desc-2', text: 'Розбір реальних кейсів студентів.' },
+    ],
+    values: { standard: false, pro: 2, premium: 8 },
   },
   {
     id: 'workshops',
     title: 'Воркшопи зі спікером',
-    values: {
-      standard: false,
-      pro: true,
-      premium: true,
-    },
+    description: [
+      {
+        id: 'workshops-desc-1',
+        text: 'Практичні інтерактивні заняття з експертами.',
+      },
+      {
+        id: 'workshops-desc-2',
+        text: 'Розбір інструментів та оптимальних робочих процесів.',
+      },
+    ],
+    values: { standard: false, pro: true, premium: true },
   },
   {
     id: 'homework_review',
     title: 'Перевірка ДЗ',
-    values: {
-      standard: false,
-      pro: true,
-      premium: true,
-    },
+    description: [
+      {
+        id: 'homework_review-desc-1',
+        text: 'Персональний фідбек на кожну роботу.',
+      },
+      {
+        id: 'homework_review-desc-2',
+        text: 'Покрокові рекомендації щодо покращення результатів.',
+      },
+    ],
+    values: { standard: false, pro: true, premium: true },
   },
   {
     id: 'special_block',
     title: 'Доступ до спеціалізованого блоку',
+    description: [
+      {
+        id: 'special_block-desc-1',
+        text: 'Вибір напрямку: маркетинг, дизайн, аналітика або бізнес.',
+      },
+      {
+        id: 'special_block-desc-2',
+        text: 'Поглиблені практики під обрану спеціальність.',
+      },
+      {
+        id: 'special_block-desc-3',
+        text: 'Додаткові інструменти та матеріали.',
+      },
+    ],
     values: {
       standard: false,
       pro: 'Обираєте 1 спецблок',
@@ -124,38 +179,66 @@ const features: Feature[] = [
   {
     id: 'certificate',
     title: 'Сертифікат про проходження курсу',
-    values: {
-      standard: false,
-      pro: true,
-      premium: true,
-    },
+    description: [
+      {
+        id: 'certificate-desc-1',
+        text: 'Офіційне підтвердження ваших навичок.',
+      },
+      {
+        id: 'certificate-desc-2',
+        text: 'Додається до вашого портфоліо або резюме.',
+      },
+    ],
+    values: { standard: false, pro: true, premium: true },
   },
   {
     id: 'post_support',
     title: 'Підтримка кураторами після навчання',
-    values: {
-      standard: false,
-      pro: false,
-      premium: '3 місяці',
-    },
+    description: [
+      {
+        id: 'post_support-desc-1',
+        text: 'Допомога в реалізації перших проєктів.',
+      },
+      {
+        id: 'post_support-desc-2',
+        text: 'Супровід при пошуку замовлень або роботи.',
+      },
+    ],
+    values: { standard: false, pro: false, premium: '3 місяці' },
   },
   {
     id: 'genius_talents',
     title: 'Доступ до Genius Talents',
-    values: {
-      standard: false,
-      pro: false,
-      premium: true,
-    },
+    description: [
+      {
+        id: 'genius_talents-desc-1',
+        text: 'Можливість потрапити у внутрішню базу випускників.',
+      },
+      {
+        id: 'genius_talents-desc-2',
+        text: 'Рекомендації роботодавцям і партнерам.',
+      },
+    ],
+    values: { standard: false, pro: false, premium: true },
   },
   {
     id: 'ai_community',
     title: 'Доступ до спільноти AI спеціалістів (XXX учасників)',
-    values: {
-      standard: false,
-      pro: false,
-      premium: true,
-    },
+    description: [
+      {
+        id: 'ai_community-desc-1',
+        text: 'Закрита спільнота однодумців та фахівців.',
+      },
+      {
+        id: 'ai_community-desc-2',
+        text: 'Обмін досвідом, порадами та кейсами.',
+      },
+      {
+        id: 'ai_community-desc-3',
+        text: 'Постійні оновлення та новини зі світу AI.',
+      },
+    ],
+    values: { standard: false, pro: false, premium: true },
   },
 ];
 
