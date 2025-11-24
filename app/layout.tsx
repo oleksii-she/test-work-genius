@@ -17,9 +17,24 @@ const gilroy = localFont({
 export const metadata: Metadata = {
   title: 'Genius Space',
   description:
-    'AI Для новачків з 0 до повного опанування професії та результату MoneyMaker Опануйте трендовий напрямок, збільште ефективність у своїй роботі та почніть заробляти набагато більше за допомогою штучного інтелекту',
+    'Опануйте штучний інтелект з нуля: навчання, практика та заробіток у трендовій професії з Genius.Space',
+  openGraph: {
+    title: 'Genius Space',
+    description:
+      'Опануйте штучний інтелект з нуля: навчання, практика та заробіток у трендовій професії з Genius.Space',
+    url: 'https://test-work-genius.vercel.app',
+    siteName: 'Genius Space',
+    images: [
+      {
+        url: '/logo.svg',
+        width: 150,
+        height: 150,
+        alt: 'Genius Space AI Course',
+      },
+    ],
+    type: 'website',
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
