@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 
+import { INCREASE_DATES } from './price';
+
 import styles from './timer.module.css';
 
 type TimeLeft = {
@@ -15,12 +17,10 @@ export const Timer = ({
   className,
   itemClass,
   onPriceChange,
-  dates,
 }: {
   className?: string;
   itemClass?: string;
   onPriceChange?: (newPrice: number) => void;
-  dates?: number[];
 }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
@@ -31,6 +31,8 @@ export const Timer = ({
   const [increments, setIncrements] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const stableOnPriceChange = useRef(onPriceChange);
+
+  const dates = INCREASE_DATES;
 
   useEffect(() => {
     if (!dates || currentIndex >= dates.length) return;
