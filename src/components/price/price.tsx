@@ -51,10 +51,10 @@ const INCREASE_DATES = [
 
 // test
 // export const INCREASE_DATES = [
-//   new Date('2025-11-25T13:43:00').getTime(),
-//   new Date('2025-11-25T13:45:00').getTime(),
-//   new Date('2025-11-25T13:48:00').getTime(),
-//   new Date('2025-11-25T13:50:00').getTime(),
+//   new Date('2025-11-25T14:22:00').getTime(),
+//   new Date('2025-11-25T14:23:00').getTime(),
+//   new Date('2025-11-25T14:24:00').getTime(),
+//   new Date('2025-11-25T14:50:00').getTime(),
 // ];
 
 function getCurrentPrice(basePrice: number): string {
