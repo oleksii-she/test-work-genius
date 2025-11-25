@@ -42,7 +42,7 @@ const initialPriceData: IPrice[] = [
   },
 ];
 
-const INCREASE_DATES = [
+export const INCREASE_DATES = [
   new Date('2025-11-28T23:59:59').getTime(),
   new Date('2025-12-05T23:59:59').getTime(),
   new Date('2025-12-12T23:59:59').getTime(),
@@ -95,7 +95,6 @@ export const Price = () => {
           className={styles.timer}
           itemClass={styles.timer_item}
           onPriceChange={handlePriceChange}
-          dates={INCREASE_DATES}
         />
       </div>
       <div className={styles['price-block']}>
