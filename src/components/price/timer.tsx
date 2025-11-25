@@ -1,11 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import styles from './timer.module.css';
-
-const START_PRICE = 1000;
-const MAX_INCREMENTS = 5;
 
 type TimeLeft = {
   days: number;
@@ -14,24 +11,16 @@ type TimeLeft = {
   seconds: number;
 };
 
-function getNextFridayDeadline() {
-  const now = new Date();
-  const day = now.getDay(); // неділя = 0, понеділок = 1 ...
-  const daysUntilFriday = (5 - day + 7) % 7 || 7;
-  const nextFriday = new Date(now);
-  nextFriday.setDate(now.getDate() + daysUntilFriday);
-  nextFriday.setHours(23, 59, 59, 999); // дедлайн на п’ятницю 23:59
-  return nextFriday;
-}
-
 export const Timer = ({
   className,
   itemClass,
   onPriceChange,
+  dates,
 }: {
   className?: string;
   itemClass?: string;
   onPriceChange?: (newPrice: number) => void;
+  dates?: number[];
 }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
@@ -39,25 +28,25 @@ export const Timer = ({
     minutes: 0,
     seconds: 0,
   });
-  const [price, setPrice] = useState(START_PRICE);
   const [increments, setIncrements] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const stableOnPriceChange = useRef(onPriceChange);
 
   useEffect(() => {
-    const targetDate = getNextFridayDeadline().getTime();
+    if (!dates || currentIndex >= dates.length) return;
 
+    const targetDate = dates[currentIndex];
     const timer = setInterval(() => {
       const now = Date.now();
       const distance = targetDate - now;
 
       if (distance <= 0) {
-        const newIncrements = (increments + 1) % 5; // максимум 4 підвищення
-        const newPrice = START_PRICE + newIncrements * 1000;
-
-        setIncrements(newIncrements);
-        setPrice(newPrice);
-
-        onPriceChange?.(newIncrements); // 🔑 передаємо кількість підвищень
-        clearInterval(timer);
+        setIncrements((prev) => prev + 1);
+        if (currentIndex + 1 < dates.length) {
+          setCurrentIndex((i) => i + 1);
+        } else {
+          clearInterval(timer);
+        }
       } else {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -69,7 +58,17 @@ export const Timer = ({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [increments, onPriceChange]);
+  }, [currentIndex, dates]);
+
+  useEffect(() => {
+    stableOnPriceChange.current = onPriceChange;
+  }, [onPriceChange]);
+
+  useEffect(() => {
+    if (increments > 0) {
+      stableOnPriceChange.current?.(increments);
+    }
+  }, [increments]);
 
   return (
     <div className={`${styles.timer} timer ${className}`}>
